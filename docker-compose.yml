@@ -1,0 +1,16 @@
+version: "3.5"
+services:
+  micro_service:
+    container_name: posto7_receita
+    image: node:latest
+    working_dir: /home/receita
+    restart: always
+    environment:
+      - NODE_ENV=development
+      - TZ=America/Bahia
+    ports:
+      - 8081:3004
+    volumes:
+      - ./microservice-cnpj:/home/receita
+    command: "yarn start"
+    tty: true
