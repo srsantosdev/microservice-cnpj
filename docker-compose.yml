@@ -11,6 +11,6 @@ services:
     ports:
       - 8081:3004
     volumes:
-      - ./microservice-cnpj:/home/receita
+      - .:/home/receita
     command: "yarn start"
     tty: true
